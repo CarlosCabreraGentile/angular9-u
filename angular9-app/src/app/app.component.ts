@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular 9 App';
+
+  pageSelected = 'recipe';
+
+  onNavigate(page: string) {
+    this.pageSelected = page;
+  }
 }
