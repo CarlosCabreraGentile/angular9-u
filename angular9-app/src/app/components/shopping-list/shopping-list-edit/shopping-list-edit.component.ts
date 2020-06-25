@@ -7,8 +7,8 @@ import { Ingredient } from 'src/app/shared/ingredients.model';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent implements OnInit {
-  @ViewChild('nameInput', { static: false }) nameInputRef: ElementRef;
-  // @ViewChild('nameInput') nameInputRef: ElementRef;
+  // { static: false } ANGULAR 9 ONLY NECESSARY IN ONINIT WITH TRUE { static:true }
+  @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
